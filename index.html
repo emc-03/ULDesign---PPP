@@ -18,12 +18,12 @@
     <a href="index.html" class="active">HOME</a>
     <a href="about.html">ABOUT US</a>
     <div class="dropdown">
-      <button class="dropbtn">ANIMAL EDUCATION 
-        <i class="bi bi-caret-down"></i>
+      <button onclick="animalEdButton()" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
+        
         
       </button>
       <!--dropdown for navigation education tab-->
-      <div class="dropdown-list">
+      <div id="dropdownList" class="animalDropdown">
         <a href="dropdown/cats.html">CATS</a>
         <a href="dropdown/dogs.html">DOGS</a>
         <a href="dropdown/dogs.html">OTHER</a>
@@ -33,7 +33,7 @@
     <a href="contact.html">CONTACT</a>
     <div class="navBar-right">
       <form class="searchBar" action="action_page.php">
-        <input id= "searchInput" type="text" placeholder="Search" name="search">
+        <input id= "searchInput" type="text" placeholder="Search" name="search" required/>
         <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div>
