@@ -4,7 +4,7 @@
 /*contact form submit*/
 function runForm(e) {
   console.log(e);
-  e.preventDefault();// TO DO: use fetch or similar to make a post request... 
+  e.preventDefault();// TO DO: post request ** this won't function without it ** 
 }
 /*nav dropdown animal education*/
 function animalEdButton() {
@@ -12,7 +12,7 @@ function animalEdButton() {
 }
 
 //open/close dropdown when clicked on page itself
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropButton')) {
     var dropList = document.getElementsByClassName('animalDropdown');
     var i;
@@ -28,10 +28,10 @@ window.onclick = function(event) {
 /*search Button */
 let inputQuery = document.querySelector('.inputQuery');
 let searchButton = document.querySelector('.searchButton');
- //check for valid length 
- 
+//check for valid length 
+
 searchButton.onclick = function () {
- 
+
   if (this.querySelector.valute.trim().length) {
     let url = 'https://www.petparadigm.com/searchq=' + this.querySelector.value;
     window.open(url, '_self');

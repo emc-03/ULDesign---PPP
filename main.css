@@ -258,7 +258,7 @@ img.background {
 
 .aboutTop h3 {
   text-decoration: underline;
-  font-weight: 300;
+
 }
 
 .aboutMiddle {
@@ -279,6 +279,92 @@ img.background {
   font-weight: 600;
 
 }
+
+/* Animal Education Page */
+
+.mainEdu {
+  margin: auto;
+  box-sizing: border-box;
+ }
+
+
+
+.row1 {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+ }
+
+.column {
+  float: right;
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row1,
+.row1>.column {
+  padding: 10px;
+}
+ 
+.mainEdu a {
+  color:#000000;
+  font-weight: 600;
+}
+
+.mainEdu a:hover {
+  color:#fafafb;
+}
+.contentDog {
+  margin:auto;
+  background-color: #6699CC;
+  color: #fafafb;
+  padding:2rem;
+  text-align: center;
+}
+
+.contentDog img {
+  width:250px;
+  height:200px;
+  object-fit:contain;
+  
+}
+
+.contentCat {
+  margin:auto;
+  background-color: #6699CC;
+  color: #fafafb;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contentCat img {
+  width:250px;
+  height:200px;
+  object-fit:contain;
+}
+
+.contentOther {
+  margin:auto;
+  background-color: #6699CC;
+  color: #fafafb;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contentOther img {
+  width:250px;
+  height:200px;
+  object-fit:contain;
+}
+
+
 
 
 
@@ -348,7 +434,7 @@ img.background {
 .contact img {
   margin: auto;
   width: 100%;
-  
+
 }
 
 input {
@@ -459,7 +545,7 @@ form button {
 
 form button:hover {
   background-color: #6699CC;
-  color:#fafafb;
+  color: #fafafb;
 }
 
 /*dog page*/
@@ -522,14 +608,22 @@ form button:hover {
 
 /* Cat Page */
 .catMain {
-  display:flex;
-  width:auto;
+  display: flex;
+  width: auto;
 
 }
+
 .mainCatLeft {
-  margin:auto;
-  padding:1rem;
-  display:inline-block;
+  margin: auto;
+  padding: 1rem;
+  display: inline-block;
+
+}
+
+.mainCatLeft h3 {
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
 
 }
 
@@ -538,17 +632,27 @@ form button:hover {
   font-style: italic;
 }
 
+.mainCatLeft form {
+  position: absolute;
+  top: 70%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 .mainCatRight {
-  margin:auto;
+  margin: auto;
   display: inline-block;
-  width:50%;
-  }
+  width: 50%;
+}
 
 .mainCatRight img {
-  margin:auto;
-  border-radius: 20%;
-  width:fit-content;
+  margin: auto;
+  border-radius: 18%;
+  width: fit-content;
 }
+
+
 
 @media screen and (max-width: 600px) {
 
@@ -654,4 +758,8 @@ form button:hover {
 
   }
 
+  .column {
+    width: 100%;
+
+  }
 }
