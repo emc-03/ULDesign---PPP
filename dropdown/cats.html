@@ -12,29 +12,38 @@
 
 <body>
   <div class="logo" id="logoheader">
-    <a href="index.html"> <img src="../images/Picture2.png" alt="PPP Logo"></a>
+    <a href="../index.html"> <img src="../images\Picture2.png" alt="PPP Logo"></a>
   </div>
   <nav class="navBar" id="myNavBar">
-    <a href="../index.html" class="active">HOME</a>
-    <a href="../about.html">ABOUT US</a>
+    <div class="container">
+    <div class ="navBar-left">
+      <ul class="nav-left">
+    <li><a  href="../index.html" class="active">HOME</a></li>
+    <li><a  href="../about.html">ABOUT</a></li>
+
     <div class="dropdown">
-      <button class="dropbtn">ANIMAL EDUCATION
-        <i class="bi bi-caret-down"></i>
+      <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
       </button>
-      <div class="dropdown-list">
-        <a href="cats.html">CATS</a>
-        <a href="dogs.html">DOGS</a>
-        <a href="other.html">OTHER</a>
+      <!--dropdown for navigation education tab-->
+      <div id="dropdownList" class="animalDropdown">
+        <a href="dropdown/cats.html">CATS</a>
+        <a href="dropdown/dogs.html">DOGS</a>
+        <a href="dropdown/dogs.html">OTHER</a>
       </div>
     </div>
-    <a href="../contact.html">CONTACT</a>
+  
+    <li><a href="../contact.html">CONTACT</a></li>
+  </ul>
+</div>
     <div class="navBar-right">
       <form class="searchBar" action="action_page.php">
         <input id="searchInput" type="text" placeholder="Search" name="search" required />
-        <button type="submit"><i class="bi bi-search"></i></button>
+        <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="dropDownNav()">&#9776;</a>
+    <a href="javascript:void(0);" class="icon" onclick="searchBar()">&#9776;</a>
+ 
+</div>
   </nav>
   <main class="catMain">
     <div class="mainCatLeft">
