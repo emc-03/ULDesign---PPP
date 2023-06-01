@@ -21,9 +21,11 @@
   padding: auto;
   box-sizing: border-box;
 }
- .navBar li {
+
+.navBar li {
   list-style: none;
- }
+}
+
 .navBar {
   display: flex;
   flex-flow: row nowrap;
@@ -42,43 +44,47 @@
   width: 100%;
   max-width: 15000px;
   justify-content: space-around;
-  align-items:stretch;
+  align-items: stretch;
 }
 
-.nav-left{
-  margin:10%;
+.nav-left {
+  margin: 10%;
   text-align: center;
-  
+
 }
 
-.nav-left, .navBar-right {
+.nav-left,
+.navBar-right {
   display: flex;
   flex-flow: row nowrap;
   width: 300px;
   z-index: 1;
 }
+
 .navBar-left {
-  margin-left:10%;
+  margin-left: 10%;
   justify-content: flex-start;
- }
+}
+
 .navBar-right {
   justify-content: flex-end;
   align-items: right;
-  margin-left:45%;
+  margin-left: 45%;
 }
 
-.searchBar, .nav-left {
-  margin:0;
-  display:flex;
+.searchBar,
+.nav-left {
+  margin: 0;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: right;
   flex-basis: 400px;
-  align-items:center;
-  color:#000000;
+  align-items: center;
+  color: #000000;
 }
 
 .nav-left a {
-  margin:5px;
+  margin: 5px;
   color: #101010;
   padding: 20px;
   text-decoration: none;
@@ -173,8 +179,8 @@
   max-width: 200px;
   height: auto;
   align-items: center;
-  padding-top:3px;
-  padding-right:3px;
+  padding-top: 3px;
+  padding-right: 3px;
 }
 
 /* Style the search field */
@@ -184,7 +190,7 @@ form {
   text-align: center;
   text-decoration: none;
   font-size: 15px;
-  
+
 }
 
 
@@ -196,7 +202,7 @@ form.searchBar input[type=text] {
   background: #f1f1f1;
   font-size: 15px;
   border: 2px solid grey;
- 
+
 }
 
 /* Style the submit button */
