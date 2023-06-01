@@ -21,115 +21,151 @@
   padding: auto;
   box-sizing: border-box;
 }
-
+ .navBar li {
+  list-style: none;
+ }
 .navBar {
-  background-color: #fafafb;
-  overflow: hidden;
-  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
   width: 100%;
-  height: 2.75rem;
+  height: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #003B6D;
+  z-index: 1;
 }
 
-.navBar a {
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 15000px;
+  justify-content: space-around;
+  align-items:stretch;
+}
 
-  margin: auto;
-  display: block;
-  color: #101010;
+.nav-left{
+  margin:10%;
   text-align: center;
-  padding: 15px 25px;
-  float: left;
+  
+}
+
+.nav-left, .navBar-right {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 300px;
+  z-index: 1;
+}
+.navBar-left {
+  margin-left:10%;
+  justify-content: flex-start;
+ }
+.navBar-right {
+  justify-content: flex-end;
+  align-items: right;
+  margin-left:45%;
+}
+
+.searchBar, .nav-left {
+  margin:0;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  flex-basis: 400px;
+  align-items:center;
+  color:#000000;
+}
+
+.nav-left a {
+  margin:5px;
+  color: #101010;
+  padding: 20px;
   text-decoration: none;
   font-size: 18px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 400;
 }
 
+
+
 .active {
+  text-align: center;
   background-color: #6699CC;
   color: #f4f6f6;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .navBar .icon {
   display: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-
-}
-
-.dropButton {
-  background-color: #fafafb;
-  color: #000000;
-  padding: 15px 25px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-}
-
-
-.dropButton:hover,
-.dropButton:focus {
-  background-color: #676767;
-}
-
-/* needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.animalDropdown {
-  display: none;
-  position: absolute;
-  background-color: #6699CC;
-  min-width: 160px;
-  box-shadow: 2rem;
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.animalDropdown a {
-  color: black;
-  padding: 1rem;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.animalDropdown a:hover {
-  background-color: #676767;
-}
-
-/*to show dropdown onclick*/
-.show {
-  display: block;
-}
-
-/* Add a dark background on links and the dropdown button on hover */
-.navBar a:hover,
+.nav-left a:hover,
 .dropdown:hover,
 .dropButton:hover {
   background-color: #676767;
   color: #f4f6f6;
+  padding: .65rem;
+  border-radius: 8px;
 }
 
-/* Add a light grey background to dropdown links on hover */
+.dropButton {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+  padding: 15px 25px;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  position: relative;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+
+}
+
+.animalDropdown {
+  display: inline-block;
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  transition: all 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.animalDropdown a {
+
+  display: flex;
+  column-gap: var(--gap);
+  padding: 1 rem;
+  text-decoration: none;
+  color: #000000;
+
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
 .animalDropdown a:hover {
-  background-color: #BDBDBD;
   color: #f4f6f6;
 }
 
-.dropdown:hover .dropdown-list {
-  display: block;
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
 }
 
-.navBar-right {
-  float: right;
-  display: block;
-}
+
+
 
 /* navBar logo*/
 .logo img {
@@ -137,6 +173,8 @@
   max-width: 200px;
   height: auto;
   align-items: center;
+  padding-top:3px;
+  padding-right:3px;
 }
 
 /* Style the search field */
@@ -146,7 +184,10 @@ form {
   text-align: center;
   text-decoration: none;
   font-size: 15px;
+  
 }
+
+
 
 form.searchBar input[type=text] {
   width: 60%;
@@ -155,7 +196,7 @@ form.searchBar input[type=text] {
   background: #f1f1f1;
   font-size: 15px;
   border: 2px solid grey;
-
+ 
 }
 
 /* Style the submit button */
@@ -285,7 +326,7 @@ img.background {
 .mainEdu {
   margin: auto;
   box-sizing: border-box;
- }
+}
 
 
 
@@ -295,7 +336,7 @@ img.background {
   flex-direction: row;
   justify-content: center;
 
- }
+}
 
 .column {
   float: right;
@@ -312,32 +353,33 @@ img.background {
 .row1>.column {
   padding: 10px;
 }
- 
+
 .mainEdu a {
-  color:#000000;
+  color: #000000;
   font-weight: 600;
 }
 
 .mainEdu a:hover {
-  color:#fafafb;
+  color: #fafafb;
 }
+
 .contentDog {
-  margin:auto;
+  margin: auto;
   background-color: #6699CC;
   color: #fafafb;
-  padding:2rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .contentDog img {
-  width:250px;
-  height:200px;
-  object-fit:contain;
-  
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
+
 }
 
 .contentCat {
-  margin:auto;
+  margin: auto;
   background-color: #6699CC;
   color: #fafafb;
   padding: 2rem;
@@ -345,13 +387,13 @@ img.background {
 }
 
 .contentCat img {
-  width:250px;
-  height:200px;
-  object-fit:contain;
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
 }
 
 .contentOther {
-  margin:auto;
+  margin: auto;
   background-color: #6699CC;
   color: #fafafb;
   padding: 2rem;
@@ -359,9 +401,9 @@ img.background {
 }
 
 .contentOther img {
-  width:250px;
-  height:200px;
-  object-fit:contain;
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
 }
 
 

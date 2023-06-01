@@ -15,12 +15,14 @@
     <a href="index.html"> <img src="images\Picture2.png" alt="PPP Logo"></a>
   </div>
   <nav class="navBar" id="myNavBar">
-    <a href="index.html" class="active">HOME</a>
-    <a href="about.html">ABOUT US</a>
+    <div class="container">
+    <div class ="navBar-left">
+      <ul class="nav-left">
+    <li><a  href="index.html" class="active">HOME</a></li>
+    <li><a  href="about.html">ABOUT</a></li>
+
     <div class="dropdown">
-      <button onclick="animalEdButton()" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
-
-
+      <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
       </button>
       <!--dropdown for navigation education tab-->
       <div id="dropdownList" class="animalDropdown">
@@ -28,16 +30,20 @@
         <a href="dropdown/dogs.html">DOGS</a>
         <a href="dropdown/dogs.html">OTHER</a>
       </div>
-
     </div>
-    <a href="contact.html">CONTACT</a>
+  
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</div>
     <div class="navBar-right">
       <form class="searchBar" action="action_page.php">
         <input id="searchInput" type="text" placeholder="Search" name="search" required />
         <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="dropDownNav()">&#9776;</a>
+    <a href="javascript:void(0);" class="icon" onclick="searchBar()">&#9776;</a>
+ 
+</div>
   </nav>
   <main class="flex-container">
     <div class="col1">
