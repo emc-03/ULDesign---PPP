@@ -14,45 +14,48 @@
   <div class="logo" id="logoheader">
     <a href="index.html"> <img src="images\Picture2.png" alt="PPP Logo"></a>
   </div>
-  <nav class="navBar" id="myNavBar">
-    <div class="container">
-    <div class ="navBar-left">
-      <ul class="nav-left">
-    <li><a  href="index.html" class="active">HOME</a></li>
-    <li><a  href="about.html">ABOUT</a></li>
-
-    <div class="dropdown">
-      <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
-      </button>
-      <!--dropdown for navigation education tab-->
-      <div id="dropdownList" class="animalDropdown">
-        <a href="dropdown/cats.html">CATS</a>
-        <a href="dropdown/dogs.html">DOGS</a>
-        <a href="dropdown/dogs.html">OTHER</a>
-      </div>
-    </div>
-  
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</div>
-    <div class="navBar-right">
-      <form class="searchBar" action="action_page.php">
-        <input id="searchInput" type="text" placeholder="Search" name="search" required />
-        <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
-      </form>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="searchBar()">&#9776;</a>
- 
-</div>
-  </nav>
+  <nav id="myNavBar" class="navBar" >
+    <i id="navToggle" class="bi bi-list"></i>
+       <div  class="container">
+       <div id= "left-container" class ="navBar-left">
+         <ul class="nav-left">
+       <li><a  href="index.html" class="active">HOME</a></li>
+       <li><a  href="about.html">ABOUT</a></li>
+   
+       <div class="dropdown">
+         <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
+         </button>
+         <!--dropdown for navigation education tab-->
+         <div id="dropdownList" class="animalDropdown">
+           <a href="dropdown/cats.html">CATS</a>
+           <a href="dropdown/dogs.html">DOGS</a>
+           <a href="dropdown/dogs.html">OTHER</a>
+         </div>
+       </div>
+     
+       <li><a href="contact.html">CONTACT</a></li>
+     </ul>
+   </div>
+       <div class="navBar-right">
+         <form class="searchBar" action="action_page.php">
+           <input id="searchInput" type="text" placeholder="Search" name="search" required />
+           <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
+         </form>
+       </div>
+   
+    
+   </div>
+     </nav>
   <main class="contactPage">
     <div class="contactLeft">
-      <h3>Contact Request Form</h3>
-      <br>
-      <h5>We will contact you within 48 hours to schedule a consultation. <br> All fields are required.</h5>
+      <div class="formHeader">
+         <h3>Contact Request Form</h3>
+        <br>
+        <h5>We will contact you within 48 hours to schedule a consultation. <br> All fields are required.</h5></div>
+     
       <form onsubmit="runForm(event)" action="https://formSubmit.co/your@email.com" method="POST" class="contactForm">
         <!--User/Client Information-->
-        <hr>
+        
         <label for="firstName">First Name:</label>
         <input type="text" required id="fnameID" name="fName">
         <label for="lastName">Last Name:</label>
@@ -62,14 +65,14 @@
         <label for="phone">Phone:</label><br>
         <input type="text" required id="phoneID" name="phone"><br>
         <label for="timezone">Time Zone:</label><br>
-        <input type="text" required id="tzoneID" name="tZone"><br>
+        <input type="text" required id="tzoneID" name="tZone">
         <!--Pet Form Information-->
         <hr>
-        <label for="petName">Pet Name:</label>
-        <input type="text" required id="pnameID" name="pName">
-        <label for="petType">Type of Animal:</label>
+        <label for="petName">Pet Name:</label> 
+        <input type="text" required id="pnameID" name="pName"><br>
+        <label for="petType">Animal Type:</label>
         <input type="text" required id="animalTypeID" name="petType"><br>
-        <label for="age">Pet Age:</label><br>
+        <label for="age">Age of Pet:</label>
         <input type="text" required id="ageID" name="petAge"><br>
         <button class="formSubmit" type="submit" value="Submit">Submit</button>
       </form>

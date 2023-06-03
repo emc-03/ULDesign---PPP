@@ -15,37 +15,38 @@
   <div class="logo" id="logoheader">
     <a href="../index.html"> <img src="../images/Picture2.png" alt="PPP Logo"></a>
   </div>
-  <nav class="navBar" id="myNavBar">
-    <div class="container">
-    <div class ="navBar-left">
-      <ul class="nav-left">
-    <li><a  href="../index.html" class="active">HOME</a></li>
-    <li><a  href="../about.html">ABOUT</a></li>
-
-    <div class="dropdown">
-      <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
-      </button>
-      <!--dropdown for navigation education tab-->
-      <div id="dropdownList" class="animalDropdown">
-        <a href="dropdown/cats.html">CATS</a>
-        <a href="dropdown/dogs.html">DOGS</a>
-        <a href="dropdown/dogs.html">OTHER</a>
-      </div>
-    </div>
-  
-    <li><a href="../contact.html">CONTACT</a></li>
-  </ul>
-</div>
-    <div class="navBar-right">
-      <form class="searchBar" action="action_page.php">
-        <input id="searchInput" type="text" placeholder="Search" name="search" required />
-        <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
-      </form>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="searchBar()">&#9776;</a>
- 
-</div>
-  </nav>
+  <nav id="myNavBar" class="navBar" >
+    <i id="navToggle" class="bi bi-list"></i>
+       <div  class="container">
+       <div id= "left-container" class ="navBar-left">
+         <ul class="nav-left">
+       <li><a  href="../index.html" class="active">HOME</a></li>
+       <li><a  href="../about.html">ABOUT</a></li>
+   
+       <div class="dropdown">
+         <button id="animalButton" class="dropButton">ANIMAL EDUCATION<i class="bi bi-caret-down"></i></button>
+         </button>
+         <!--dropdown for navigation education tab-->
+         <div id="dropdownList" class="animalDropdown">
+           <a href="dropdown/cats.html">CATS</a>
+           <a href="dropdown/dogs.html">DOGS</a>
+           <a href="dropdown/dogs.html">OTHER</a>
+         </div>
+       </div>
+     
+       <li><a href="../contact.html">CONTACT</a></li>
+     </ul>
+   </div>
+       <div class="navBar-right">
+         <form class="searchBar" action="action_page.php">
+           <input id="searchInput" type="text" placeholder="Search" name="search" required />
+           <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
+         </form>
+       </div>
+   
+    
+   </div>
+     </nav>
   <main class="flexContainer">
     <div class="leftContainer">
       <!--create div add in border/font to css -->

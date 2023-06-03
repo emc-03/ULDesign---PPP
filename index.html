@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ 
   <title>Pet Paradigm Professionals</title>
 </head>
 
@@ -14,9 +15,10 @@
   <div class="logo" id="logoheader">
     <a href="index.html"> <img src="images\Picture2.png" alt="PPP Logo"></a>
   </div>
-  <nav class="navBar" id="myNavBar">
-    <div class="container">
-    <div class ="navBar-left">
+  <nav id="myNavBar" class="navBar" >
+ <i id="navToggle" class="bi bi-list"></i>
+    <div  class="container">
+    <div id= "left-container" class ="navBar-left">
       <ul class="nav-left">
     <li><a  href="index.html" class="active">HOME</a></li>
     <li><a  href="about.html">ABOUT</a></li>
@@ -41,11 +43,13 @@
         <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="searchBar()">&#9776;</a>
+
  
 </div>
   </nav>
-  <main class="flex-container">
+  <main class="mainBackground">
+    <img class="background" src="images/fishBackground.png" alt="image of 2 dogs">
+    <div class="flex-container"> 
     <div class="col1">
       <div class="hero-text">
         <h2> Pet Paradigm Professionals <h2>
@@ -53,17 +57,15 @@
       </div>
     </div>
     <div class="col2">
-      <img class="background" src="images/heroImage.png" alt="image of 2 dogs">
-      <div class="hero">
+           <div class="hero">
         <form action="contact.html">
           <button type="submit" class="contactButton contact">Contact Us</button>
         </form>
-
       </div>
 
     </div>
 
-
+  </div>
   </main>
   <footer class="footerDiv">
     <div class="column1">
