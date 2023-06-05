@@ -1,57 +1,28 @@
 
-/*hamburger menu*/
-let navBar = document.getElementByID('left-container');
-let navToggle = document.getElementById('navToggle');
-navToggle.addEventListener('click',function()
-{
-  navBar.classList.toggle('active');
-});
+// not grabbing links on lines 32 / 33 on index.html 
+// animal education button 
 
+const animalButton = document.querySelector(".dropButton");
+const dropMenu = document.querySelector(".animalDropdown");
+  animalButton.addEventListener("click", () => {
+    
+    dropMenu.classList.toggle("hide");
 
+  });
 
-/*contact form submit*/
-function runForm(e) {
-  console.log(e);
-  e.preventDefault();// TO DO: post request ** this won't function without it ** 
-}
-/*nav dropdown animal education*/
-const animalDropButton = document.getElementById("animalButton");
-const dropdownList = document.getElementById("dropdownList");
-
-const dropdownButton = function() {
-  animalDropButton.classList.toggle("show");
-
-}
-
-animalDropButton.addEventListener("click", function (e){
-  e.stopPropagation();
-  dropdownButton();
-});
-
-document.documentElement.addEventListener("click", function() {
-if (dropdownButton.classList.contains("show")) {
-  dropdownButton();
+window.addEventListener("click", (e) => {
+  if (e.target !== animalButton) {
+  dropMenu.classList.add("hide");
 }
 });
 
-/*search Button */
-let inputQuery = document.querySelector('.inputQuery');
-let searchButton = document.querySelector('.searchButton');
-//check for valid length 
+// toggle / responsive nav menu 
+// will show on desktop size - but not scaled to "600px" - media query issues 
+const navToggleBars = document.querySelector("#navToggle");
+const navBarList = document.querySelector(".container");
 
-searchButton.onclick = function () {
+  navToggleBars.addEventListener("click", () => {
+    
+    navBarList.classList.toggle("hide");
 
-  if (this.querySelector.value.trim().length) {
-    let url = 'https://www.petparadigm.com/searchq=' + this.querySelector.value;
-    window.open(url, '_self');
-  }
-}
-
-
-var searchInput = document.getElementById(searchInput)
-searchInput.addEventListener("keyup"), function (event) {
-  if (event.keyCode === 13 && InputDeviceInfo.value) {
-    event.preventDefault();
-    document.getElementById("searchSubmit").click();
-  }
-}
+  });
