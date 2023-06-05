@@ -124,7 +124,7 @@
 /*animal education button*/
 
 .dropButton {
-
+  
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -134,9 +134,11 @@
   border-radius: var(--radius);
   border: none;
   position: relative;
+  background: none;
   font-size: 18px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 400;
+  
 
 }
 
@@ -147,22 +149,24 @@
   margin-top: 0.3rem;
   transition: all 0.1s cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(0.5rem);
+  
 }
 
 
 .animalDropdown a {
-
+  margin:1vh;
   display: block;
   width: 10rem;
-
-
-  padding: 5px;
+  padding: 3px;
+  border-radius: 10px;
+  text-align: center;
+  float:center;
   text-decoration: none;
   background-color: #3a3939;
   color: #fafafb;
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .animalDropdown a:hover {
@@ -368,9 +372,6 @@ form.searchBar::after {
   padding: 5vh;
 }
 
-.mainEdu a:hover {
-  color: #fafafb;
-}
 
 .contentDog {
   margin: auto;
@@ -737,77 +738,72 @@ form button:hover {
   display: block;
 }
 
-@media screen and (min-width: 600px) {
 
-
-  .navBar a:not(:first-child),
-  .dropdown .dropbtn {
+@media screen and (min-width:600px) {
+ 
+  #navToggle {
     display: none;
   }
-
-  .navBar a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-#navToggle {
-  display: none;
 }
 
 
 @media screen and (max-width: 600px) {
 
 
+  .navBar a.icon {
+    float: right;
+    display: block;
+  }
+
 
   .mainBackground {
     display: flex;
     width: 100%;
-    height: 5em;
+    height: 5rem;
 
   }
 
   .background {
-    display: none;
+   display: none;
   }
 
   .flex-container {
 
     flex-flow: column nowrap;
     justify-content: center;
+   
   }
 
   .col1 {
     margin-top: 15vh;
-    margin-bottom: 53vh;
+    margin-bottom: 55vh;
     width: 60%;
     align-items: center;
     position: relative;
-
+    background-color: #003B6D;
   }
 
   .col2 {
     margin: 0;
     width: 40%;
     position: relative;
-    margin-left: 44vh;
+    margin-left: 45vh;
+    
   }
 
   /*navBar */
 
   .container {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center;
+    margin:auto;
+    display: block;
+    justify-content:left;
+    padding-bottom:30px;
+    height: 50px;
+    align-items: left;
+    
 
   }
 
-  .nav-left {
-    margin: 0;
-    margin-left: 40px;
-  }
 
   #navToggle {
 
@@ -823,12 +819,26 @@ form button:hover {
 
 
   .nav-left {
+ 
+  
+    display:block;
+    position: relative;
+    float:right;
+    background-color: #676767;
+    padding:10px;
+    border-radius: 10%;
+    border-style:ridge;
+
     list-style-type: none;
-    display: none;
   }
 
   .navBar-right {
-    display: none;
+    display: block;
+    margin:auto;
+    position: absolute;
+    padding-bottom: ;
+    padding-right:14vh;
+    float:left;
   }
 
   .nav-left:hover {
@@ -947,4 +957,41 @@ form button:hover {
     padding: 2rem;
     text-align: center;
   }
+
+  .contactPage {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:0;
+  }
+
+  .formHeader {
+    margin:10px;
+    justify-content: left;
+    text-align: center;
+  }
+
+  .contentRight {
+    margin:0;
+    align-items: center;
+    text-align: center;
+   
+  }
+
+  .contentLeft {
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .businessPhoto {
+    margin:0;
+    width:65vw;
+    height: 50vh;
+    object-fit: contain;
+ 
+
+    }
 }

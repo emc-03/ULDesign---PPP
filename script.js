@@ -19,10 +19,16 @@ window.addEventListener("click", (e) => {
 // toggle / responsive nav menu 
 // will show on desktop size - but not scaled to "600px" - media query issues 
 const navToggleBars = document.querySelector("#navToggle");
-const navBarList = document.querySelector(".container");
+const navBarList = document.querySelector(".navBar-left");
 
   navToggleBars.addEventListener("click", () => {
     
     navBarList.classList.toggle("hide");
 
+  });
+
+  window.addEventListenter("click", (e) => {
+    if (e.target !== navToggleBars) {
+      navBarList.classList.add("hide");
+    }
   });
