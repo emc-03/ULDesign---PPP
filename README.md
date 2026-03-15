@@ -12,14 +12,32 @@ JavaScript (Vanilla)
 No frameworks or external libraries are used in order to demonstrate core web fundamentals.
 Project Outline : 
 
-├── index.html              # Homepage
-├── about.html              # Information about the project/site
-├── contact.html            # Contact page
-├── animalEducation.html    # Educational content page
-├── main.css                # Global site styling
-├── script.js               # Basic JavaScript functionality
-├── images/                 # Static image assets
-└── dropdown/               # Navigation dropdown components
+Project Structure
+
+.
+├── index.html
+│   └── Homepage
+│
+├── about.html
+│   └── Information about the project/site
+│
+├── contact.html
+│   └── Contact page
+│
+├── animalEducation.html
+│   └── Educational content page
+│
+├── main.css
+│   └── Global site styling
+│
+├── script.js
+│   └── Basic JavaScript functionality
+│
+├── images/
+│   └── Static image assets
+│
+└── dropdown/
+    └── Navigation dropdown components
 
 Features
 
